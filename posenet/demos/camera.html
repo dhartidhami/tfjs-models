@@ -44,15 +44,29 @@
         </video>
         <canvas id="output" />
     </div>
-    <div class="footer">
-        <div class="footer-text">
-            <p>
-                PoseNet runs with either a <strong>single-pose</strong> or <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
-                <br>
-                <br> The <strong>output stride</strong> and <strong>image scale factor</strong> have the largest effects on accuracy/speed. A <i>higher</i> output stride results in lower accuracy but higher speed. A <i>higher</i> image scale factor results in higher accuracy but lower speed.
-            </p>
-        </div>
-    </div>
+
+    <button onclick="playVid()" type="button">Play Video</button> 
+    <button onclick="pauseVid()" type="button">Pause Video</button><br>
+    
+    <video id="myVideo" width="560" height="315" controls preload="auto">
+      <source src="yoga_video.mp4" type="video/mp4">
+    </video>
+    
+    
+    <div id="output" style="display: inline-block; top: 4px; position: relative ;border: dotted 1px #ccc; padding: 2px;"></div>
+
+
+    <script>
+      var vid = document.getElementById("myVideo");
+
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+    </script>
     <script src="camera.js"></script>
 </body>
 
