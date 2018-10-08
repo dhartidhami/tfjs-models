@@ -45,28 +45,20 @@
         <canvas id="output" />
     </div>
 
-    <button onclick="playVid()" type="button">Play Video</button> 
-    <button onclick="pauseVid()" type="button">Pause Video</button><br>
-    
-    <video id="myVideo" width="560" height="315" controls preload="auto">
-      <source src="yoga_video.mp4" type="video/mp4">
-    </video>
+  
     
     
     <div id="output" style="display: inline-block; top: 4px; position: relative ;border: dotted 1px #ccc; padding: 2px;"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4C-gxOE0j7s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> <video id="video2" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+    </iframe>
 
-
-    <script>
-      var vid = document.getElementById("myVideo");
-
-        function playVid() {
-            vid.play();
-        }
-
-        function pauseVid() {
-            vid.pause();
-        }
-    </script>
+  
     <script src="camera.js"></script>
 </body>
 
